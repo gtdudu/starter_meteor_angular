@@ -1,0 +1,30 @@
+<gt-Notification ng-if="success" class="success">
+   {{success}}
+</gt-Notification>
+
+<gt-Notification ng-if="error" ttl="10000" class="failure">
+   {{error}}
+</gt-Notification>
+
+<!--  main page wrapper-->
+<div id="post-create" class="four-m">
+
+   <!-- Change password container -->
+   <div class="container-item full-height">
+      <form name="createPostForm" class="row">
+         <div class="form-group col-xs-12">
+            <label for="name">Titre :</label>
+            <input class="form-control" type="text" ng-model="newPost.name" required/>
+         </div>
+         <div class="form-group col-xs-12">
+            <label for="content">Contenu :</label>
+            <input class="form-control" type="text" ng-model="newPost.content" required/>
+         </div>
+         <div class="row" ng-if="createPostForm.$dirty&&createPostForm.$valid">
+            <div class="text-center">
+               <button class="btn btn-success col-xs-8 col-xs-offset-2" ng-click="savePost()" aria-label="Valider">Créer l'idée</button>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>

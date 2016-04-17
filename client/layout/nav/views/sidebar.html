@@ -1,0 +1,23 @@
+   <div id="icon-sidebar" class="msb-toggle-add">
+      <ul>
+         <li class="gt-Menu selected-menu"><a ng-href="/dashboard" ng-click="active='dashboard'"><i class="fa fa-user"></i></a></li><hr>
+         <li class="gt-Menu"><a ng-href="/post/list" ng-click= "active='post'"><i class="fa fa-tasks"></i></a></li><hr>
+         <li class="gt-Menu"><a ng-href="/static" ng-click= "active='feedback'"><i class="fa fa-thumbs-up"></i></a></li>
+     </ul>
+   </div>
+
+   <div id="content-sidebar">
+      <ul ng-show="active=='dashboard'" class="gt-CloseNav gt-SubMenu">
+         <li class="selected-sub-menu"><a ng-href="/dashboard">Dashboard</a></li>
+         <li><a ng-href="/dashboard/update">Mettre à jour</a></li>
+      </ul>
+      <ul ng-show="active=='post'" class="gt-CloseNav gt-SubMenu">
+         <li class="selected-sub-menu"><a ng-href="/post/list">Tout les posts</a></li>
+         <li><a ng-href="/post/create">Publier un nouveau post</a></li>
+      </ul>
+      <ul ng-show="active=='feedback'" class="gt-CloseNav gt-SubMenu">
+         <li class="selected-sub-menu"><a ng-href="/static">Static page</a></li>
+         <li><a ng-href="/infinite">Inifinite Scroll</a></li>
+         <li><a ng-href="/draggable">Simple drag</a></li>
+      </ul>
+   </div>
